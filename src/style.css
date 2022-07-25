@@ -19,6 +19,7 @@
     background-color: white;
     border-radius: 1.25rem;
     overflow: hidden;
+    box-shadow: theme("boxShadow.2xl")
   }
 
   .card__copy {
