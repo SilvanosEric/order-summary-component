@@ -8,36 +8,44 @@
     <script type="module" defer src="main.js"></script>
   </head>
   <body class="font-Red-Hat-Display font-medium">
-    <main>
-      <div class="card">
+    <main class="bg-p-pale-blue min-h-screen grid place-items-center p-6">
+      <div
+        class="card | text-n-desaturated-blue text-center pb-4 md:pb-8 max-w-md"
+      >
         <div class="card__figure">
           <img class="card__img" src="images/illustration-hero.svg" alt="" />
         </div>
 
-        <div class="card__body">
-          <h1 class="card__title">Order Summary</h1>
+        <div class="card__body | flow | px-8 md:px-12">
+          <h1 class="card__title | text-2xl font-black text-n-dark-blue">
+            Order Summary
+          </h1>
 
           <p class="card__copy">
             You can now listen to millions of songs, audiobooks, and podcasts on
             any device anywhere you like!
           </p>
 
-          <div class="plan">
-            <div class="plan__figure">
-              <img src="images/icon-music.svg" alt="" class="plan_icon" />
+          <div class="plan | rounded-xl">
+            <div class="flex gap-4">
+              <div class="plan__figure">
+                <img src="images/icon-music.svg" alt="" class="plan_icon" />
+              </div>
+              <div class="plan__copy">
+                <span class="plan__period | block font-bold text-n-dark-blue"
+                  >Annual Plan</span
+                >
+                <span class="plan__price">$59.99/year</span>
+              </div>
             </div>
-            <div class="plan__copy">
-              <span class="plan__period">Annual Plan</span>
-              <span class="plan__price">$59.99/year</span>
-            </div>
-            <div class="plan__button">
-              <button type="button">Change</button>
-            </div>
+            <button class="btn" data-name="change" type="button">Change</button>
           </div>
         </div>
 
-        <div class="card__footer">
-          <button class="btn" type="button">Proceed to Payment</button>
+        <div class="card__footer | flow | px-8 md:px-12">
+          <button class="btn" data-name="payment" type="button">
+            Proceed to Payment
+          </button>
           <button class="btn" data-name="cancel" type="button">
             Cancel Order
           </button>

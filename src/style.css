@@ -3,3 +3,105 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --hover: hsl(245, 83%, 68%);
+}
+
+@layer utilities {
+  .flow > * {
+    margin-top: var(--flow-space, 1.85rem);
+  }
+}
+
+@layer components {
+  .card {
+    background-color: white;
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+
+  .card__copy {
+    --flow-space: 1rem;
+  }
+
+  .plan {
+    display: flex;
+    justify-content: space-around;
+    background-color: theme("colors.n-very-pale-blue");
+    padding-block: theme("padding.4");
+  }
+
+  .btn {
+    font-weight: bold;
+    display: block;
+  }
+
+  .btn[data-name="change"] {
+    color: theme("colors.p-bright-blue");
+    text-decoration: underline;
+    font-size: theme("fontSize.sm");
+  }
+
+  .btn[data-name="change"]:hover,
+  .btn[data-name="change"]:active,
+  .btn[data-name="change"]:focus-visible {
+    text-decoration: none;
+    color: var(--hover);
+  }
+
+  .card__footer {
+    --flow-space: 1.5rem;
+  }
+
+  .card__footer .btn {
+    width: 100%;
+    padding-block: 0.8rem;
+    border-radius: 0.6rem;
+  }
+
+  .btn[data-name="payment"] {
+    background-color: theme("colors.p-bright-blue");
+    color: white;
+    box-shadow: 0 1.5rem 0.85rem hsl(248, 100%, 91%);
+  }
+
+  .btn[data-name="payment"]:hover,
+  .btn[data-name="payment"]:focus-visible,
+  .btn[data-name="payment"]:active {
+    background-color: var(--hover);
+  }
+
+  .btn[data-name="cancel"] {
+    --flow-space: 0.6rem;
+  }
+
+  .btn[data-name="cancel"]:hover,
+  .btn[data-name="cancel"]:focus-visible,
+  .btn[data-name="cancel"]:active {
+    color: theme("colors.n-dark-blue");
+  }
+
+  @media (min-width: theme("screens.md")) {
+    .card__title {
+      --flow-space: 3rem;
+      font-size: theme("fontSize.3xl");
+    }
+
+    .card__copy {
+      --flow-space: 1.25rem;
+    }
+
+    .plan {
+      padding-block: theme("padding.6");
+    }
+
+    .btn[data-name="payment"] {
+      --flow-space: 2rem;
+    }
+
+    .btn[data-name="cancel"] {
+      --flow-space: 1rem;
+    }
+  }
+}
